@@ -6,7 +6,7 @@ An AI-powered dental diagnostics and consulting web application. Users can uploa
 
 ## 🚀 Key Features
 
-* **AI Dental Scan**: Upload or take photos of teeth to run real-time caries detection powered by Google Gemini Vision.
+* **AI Dental Scan**: Upload or take photos of teeth to run real-time caries detection.
 * **Interactive Dental Chatbot**: Ask questions about oral hygiene, prevention, and treatment advice from a trained AI dental bot.
 * **Doctor Dashboard**: Specialized portal for certified dentists to search patients, view scans, edit reports, and write treatment plans.
 * **Patient Portal**: Review personal diagnostic reports, track dental history, and save clinic follow-ups.
