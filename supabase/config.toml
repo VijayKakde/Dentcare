@@ -1,0 +1,7 @@
+project_id = "qkzgtyjuffiakmgznjnd"
+
+[functions.analyze-dental]
+verify_jwt = false
+
+[functions.dental-chat]
+verify_jwt = false

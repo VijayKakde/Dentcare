@@ -1,0 +1,206 @@
+{
+  "app": {
+    "title": "DentAI Care",
+    "tagline": "AI-Powered Dental Caries Detection",
+    "description": "Advanced deep learning technology for early detection and classification of dental caries. Get instant analysis, detailed reports, and personalized dental care guidance."
+  },
+  "nav": {
+    "home": "Home",
+    "scan": "Scan Teeth",
+    "reports": "Reports",
+    "chatbot": "Dental Assistant",
+    "tips": "Dental Tips",
+    "profile": "My Profile",
+    "dashboard": "Doctor Dashboard",
+    "signIn": "Sign In",
+    "signOut": "Sign Out"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "welcomeBack": "Welcome Back",
+    "createAccount": "Create Account",
+    "rolePatient": "Patient",
+    "roleDoctor": "Doctor",
+    "iAmA": "I am a"
+  },
+  "profile": {
+    "title": "My Profile",
+    "subtitle": "Manage your personal information",
+    "patientId": "Patient ID",
+    "memberSince": "Member Since"
+  },
+  "dashboard": {
+    "title": "Doctor Dashboard",
+    "patientLookup": "Patient Lookup",
+    "searchPatient": "Search Patient",
+    "noPatientFound": "No patient found with this ID"
+  },
+  "home": {
+    "heroTitle": "Detect Dental Caries Early with AI",
+    "heroSubtitle": "Upload or capture an image of your teeth and receive instant AI-powered analysis with detailed classification and recommendations.",
+    "scanButton": "Scan Teeth",
+    "reportsButton": "View Reports",
+    "chatbotButton": "Dental Assistant",
+    "tipsButton": "Dental Tips",
+    "features": {
+      "title": "Why Choose DentAI Care?",
+      "ai": {
+        "title": "AI-Powered Detection",
+        "description": "Advanced CNN model with transfer learning for accurate caries detection"
+      },
+      "stages": {
+        "title": "Stage Classification",
+        "description": "Classify caries into initial, moderate, or severe stages"
+      },
+      "reports": {
+        "title": "Detailed Reports",
+        "description": "Generate comprehensive medical reports with recommendations"
+      },
+      "assistant": {
+        "title": "Dental Assistant",
+        "description": "Get personalized dental care advice and answers to your questions"
+      }
+    },
+    "disclaimer": "This application is for educational and screening purposes only. It does not replace professional dental diagnosis. Please consult a qualified dentist for medical advice."
+  },
+  "scan": {
+    "title": "Scan Your Teeth",
+    "subtitle": "Upload an image or use your camera to capture a photo of your teeth for AI analysis",
+    "upload": "Upload Image",
+    "camera": "Use Camera",
+    "dragDrop": "Drag and drop an image here",
+    "orBrowse": "or click to browse",
+    "supportedFormats": "Supported formats: JPG, PNG, WEBP",
+    "analyzing": "Analyzing...",
+    "reupload": "Upload Different Image",
+    "startAnalysis": "Start Analysis",
+    "qualityCheck": "Image quality check",
+    "qualityGood": "Good quality - Ready for analysis",
+    "qualityPoor": "Please upload a clearer image"
+  },
+  "results": {
+    "title": "Analysis Results",
+    "scanId": "Scan ID",
+    "dateTime": "Date & Time",
+    "detection": "Detection Result",
+    "stage": "Caries Stage",
+    "confidence": "Confidence Score",
+    "cariesDetected": "Caries Detected",
+    "noCaries": "No Caries Detected",
+    "stages": {
+      "initial": "Initial Stage",
+      "moderate": "Moderate Stage",
+      "severe": "Severe Stage"
+    },
+    "explanation": "Explanation",
+    "recommendations": "Recommendations",
+    "downloadPdf": "Download PDF Report",
+    "saveReport": "Save Report",
+    "scanAgain": "Scan Again"
+  },
+  "reports": {
+    "title": "Scan Reports",
+    "subtitle": "View your previous dental scan reports",
+    "noReports": "No reports yet",
+    "noReportsDesc": "Your scan reports will appear here after you complete a dental scan.",
+    "startScan": "Start Your First Scan",
+    "viewDetails": "View Details",
+    "delete": "Delete"
+  },
+  "chatbot": {
+    "title": "Dental Assistant",
+    "subtitle": "Ask me anything about dental health, oral hygiene, or your scan results",
+    "placeholder": "Type your question...",
+    "send": "Send",
+    "disclaimer": "I'm an AI assistant. My responses are for informational purposes only and do not replace professional medical advice.",
+    "suggestions": {
+      "whatIsCaries": "What is dental caries?",
+      "prevention": "How can I prevent cavities?",
+      "brushingTips": "Proper brushing techniques",
+      "whenToVisit": "When should I visit a dentist?"
+    },
+    "greeting": "Hello! I'm your dental care assistant. How can I help you today? You can ask me about dental caries, oral hygiene, or get tips for better dental health."
+  },
+  "tips": {
+    "title": "Dental Health Tips",
+    "subtitle": "Learn best practices for maintaining healthy teeth and preventing dental caries",
+    "categories": {
+      "hygiene": "Oral Hygiene",
+      "brushing": "Brushing Techniques",
+      "diet": "Diet & Nutrition",
+      "prevention": "Preventive Care"
+    },
+    "hygiene": {
+      "title": "Oral Hygiene Best Practices",
+      "tips": [
+        "Brush your teeth at least twice a day for two minutes each time",
+        "Use fluoride toothpaste to strengthen enamel",
+        "Floss daily to remove plaque between teeth",
+        "Rinse with an antibacterial mouthwash",
+        "Replace your toothbrush every 3-4 months"
+      ]
+    },
+    "brushing": {
+      "title": "Proper Brushing Techniques",
+      "tips": [
+        "Hold your brush at a 45-degree angle to your gums",
+        "Use gentle, short strokes",
+        "Brush all surfaces: outer, inner, and chewing surfaces",
+        "Don't forget to brush your tongue",
+        "Avoid brushing too hard as it can damage enamel"
+      ]
+    },
+    "diet": {
+      "title": "Diet & Nutrition for Healthy Teeth",
+      "tips": [
+        "Limit sugary and acidic foods and drinks",
+        "Drink plenty of water throughout the day",
+        "Eat calcium-rich foods like dairy, leafy greens",
+        "Include crunchy fruits and vegetables in your diet",
+        "Avoid snacking frequently between meals"
+      ]
+    },
+    "prevention": {
+      "title": "Preventive Dental Care",
+      "tips": [
+        "Visit your dentist for regular check-ups every 6 months",
+        "Get professional dental cleanings",
+        "Ask about dental sealants for cavity protection",
+        "Consider fluoride treatments if recommended",
+        "Address dental issues early before they worsen"
+      ]
+    }
+  },
+  "clinics": {
+    "title": "Recommended: Visit a Nearby Dental Clinic",
+    "enableLocation": "Enable location to find nearby dental clinics",
+    "findClinics": "Find Nearby Clinics",
+    "requestingLocation": "Requesting location access...",
+    "searchingClinics": "Searching for nearby dental clinics...",
+    "error": "Unable to find clinics",
+    "foundClinics": "{{count}} clinics found",
+    "withinRadius": "Within 5km radius",
+    "noClinicsFound": "No dental clinics found nearby",
+    "tryExpandingSearch": "Try expanding your search radius"
+  },
+  "language": {
+    "english": "English",
+    "marathi": "मराठी",
+    "select": "Select Language"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "back": "Back",
+    "next": "Next",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close"
+  }
+}
