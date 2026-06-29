@@ -1,7 +1,6 @@
 import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -11,9 +10,8 @@ export default defineConfig(({ mode }) => {
 
   // Safe fallbacks (URL + publishable key) so the app never blank-screens
   // even if a hosted preview doesn't inject env vars.
-  const FALLBACK_BACKEND_URL = "https://qkzgtyjuffiakmgznjnd.supabase.co";
-  const FALLBACK_BACKEND_PUBLISHABLE_KEY =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFremd0eWp1ZmZpYWttZ3puam5kIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAwMzI1OTQsImV4cCI6MjA4NTYwODU5NH0.Cs4EwomO7mXnkeJrFqc6wHt6Lzx8X2krXpP644BflQg";
+  const FALLBACK_BACKEND_URL = "";
+  const FALLBACK_BACKEND_PUBLISHABLE_KEY = "";
 
   const supabaseUrl =
     env.VITE_SUPABASE_URL ||
@@ -41,7 +39,7 @@ export default defineConfig(({ mode }) => {
         overlay: false,
       },
     },
-    plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+    plugins: [react()],
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),

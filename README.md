@@ -1,73 +1,108 @@
-# Welcome to your Lovable project
+# 🦷 Dentcare - Smile Scan AI
 
-## Project info
+An AI-powered dental diagnostics and consulting web application. Users can upload or capture a photo of their teeth to scan for dental caries (decay), read detailed reports, consult with a Gemini-powered dental assistant chatbot, and connect with qualified dentists. Doctors can manage patients, write treatment notes, and review scans.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🚀 Key Features
 
-There are several ways of editing your application.
+* **AI Dental Scan**: Upload or take photos of teeth to run real-time caries detection powered by Google Gemini Vision.
+* **Interactive Dental Chatbot**: Ask questions about oral hygiene, prevention, and treatment advice from a trained AI dental bot.
+* **Doctor Dashboard**: Specialized portal for certified dentists to search patients, view scans, edit reports, and write treatment plans.
+* **Patient Portal**: Review personal diagnostic reports, track dental history, and save clinic follow-ups.
+* **Supabase Cloud integration**: Secure user authentication, Row-Level Security (RLS) data isolation, image storage, and serverless Edge Functions.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+* **Frontend**: React, TypeScript, Vite, Tailwind CSS, Lucide React, Shadcn UI, Framer Motion
+* **Backend**: Supabase (Database, Auth, Storage, Edge Functions)
+* **AI Engine**: Google Gemini API (`gemini-2.5-flash`)
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 💻 Local Setup Guide
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Follow these steps to get the project running locally:
 
-Follow these steps:
+### 1. Clone & Install Dependencies
+```bash
+# Clone the repository
+git clone https://github.com/VijayKakde/Dentcare.git
+cd Dentcare
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Install npm dependencies
+npm install
 ```
 
-**Edit a file directly in GitHub**
+### 2. Configure Environment Variables
+Create a file named `.env` in the root folder of the project:
+```env
+VITE_SUPABASE_URL=https://your-project-ref.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=your-anon-publishable-key
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 3. Start the Development Server
+```bash
+npm run dev
+```
+Open the output URL (usually `http://localhost:8080` or `http://localhost:5173`) in your browser.
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## ☁️ Supabase Backend Setup
 
-## What technologies are used for this project?
+To link your own cloud Supabase account to this project:
 
-This project is built with:
+### 1. Database Migrations
+1. Go to your **Supabase Dashboard** > **SQL Editor**.
+2. Run the SQL migrations found in `./supabase/migrations/` in sequential order (this creates tables, RLS rules, and automatic profile triggers).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 2. Create Storage Bucket
+1. Go to **Storage** > **New Bucket**.
+2. Create a public bucket named `dental-scans` (to store uploaded patient teeth scans).
+3. Set the bucket policies to allow authenticated uploads.
 
-## How can I deploy this project?
+### 3. Deploy Edge Functions & Secrets
+1. Link to your Supabase project:
+   ```bash
+   npx supabase link --project-ref <your-new-project-ref>
+   ```
+2. Set your Google Gemini API Key in the Supabase secrets:
+   ```bash
+   npx supabase secrets set GEMINI_API_KEY="your-gemini-api-key-here"
+   ```
+3. Deploy the Edge Functions:
+   ```bash
+   npx supabase functions deploy analyze-dental
+   npx supabase functions deploy dental-chat
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🔑 Google OAuth Setup
 
-Yes, you can!
+To enable "Sign in with Google":
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. **Google Cloud Console**:
+   * Create OAuth Client ID credentials under **APIs & Services** > **Credentials**.
+   * Select **Web Application**.
+   * Add Authorized JavaScript origin: `http://localhost:8080` (or your active local port).
+   * Add Authorized redirect URI: `https://<your-project-ref>.supabase.co/auth/v1/callback`.
+   * Copy the **Client ID** and **Client Secret**.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+2. **Supabase Dashboard**:
+   * Go to **Authentication** > **Providers** > **Google**.
+   * Toggle to **ON** and paste your Client ID and Client Secret.
+
+3. **URL Redirect Settings**:
+   * Under **Authentication** > **URL Configuration**, set the **Site URL** to `http://localhost:8080` (or your active local port) and add redirect path `http://localhost:8080/**`.
+
+---
+
+## 🌐 Production Deployment (Vercel)
+
+1. Import your GitHub repository into **Vercel**.
+2. Add your environment variables (`VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`) in the configure screen.
+3. Once deployed, update your **Site URL** in Supabase and **Authorized JavaScript Origins** in Google Cloud Console with your production Vercel domain (e.g. `https://your-app.vercel.app`).
