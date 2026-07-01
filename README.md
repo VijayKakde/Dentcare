@@ -1,4 +1,4 @@
-# 🦷 Dentcare - Smile Scan AI
+# 🦷 Dent AI Care - Smile Scan AI
 
 An AI-powered dental diagnostics and consulting web application. Users can upload or capture a photo of their teeth to scan for dental caries (decay), read detailed reports, consult with a Gemini-powered dental assistant chatbot, and connect with qualified dentists. Doctors can manage patients, write treatment notes, and review scans.
 

@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "DentAI Care",
+    "title": "Dent AI Care",
     "tagline": "AI-Powered Dental Caries Detection",
     "description": "Advanced deep learning technology for early detection and classification of dental caries. Get instant analysis, detailed reports, and personalized dental care guidance."
   },
@@ -48,7 +48,7 @@
     "chatbotButton": "Dental Assistant",
     "tipsButton": "Dental Tips",
     "features": {
-      "title": "Why Choose DentAI Care?",
+      "title": "Why Choose Dent AI Care?",
       "ai": {
         "title": "AI-Powered Detection",
         "description": "Advanced CNN model with transfer learning for accurate caries detection"

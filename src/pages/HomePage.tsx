@@ -314,7 +314,7 @@ export default function HomePage() {
       <section className="py-20 bg-grid-medical">
         <div className="container px-4">
           <Reveal className="text-center mb-14">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">How DentAI Works</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">How Dent AI Care Works</h2>
             <p style={{ color: "hsl(var(--muted-foreground))" }}>Three simple steps to know your dental health</p>
           </Reveal>
 
@@ -418,7 +418,7 @@ export default function HomePage() {
               },
               {
                 Icon: Bot,
-                title: "DentAI Chatbot",
+                title: "Dent AI Care Chatbot",
                 desc: "24/7 AI dental assistant to answer your questions",
                 color: "var(--hex-primary)",
                 bg: "var(--hex-primary-light)",
@@ -473,7 +473,7 @@ export default function HomePage() {
                 "View stage-wise detection result",
                 "Download PDF health report",
                 "Find nearby dental clinics",
-                "Chat with DentAI assistant",
+                "Chat with Dent AI Care assistant",
                 "View doctor's treatment notes",
               ]}
               cta="Get Started as Patient"
@@ -520,7 +520,7 @@ export default function HomePage() {
                 border: "1px solid rgba(14,165,233,0.3)",
               }}
             >
-              Why Trust DentAI
+              Why Trust Dent AI Care
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold" style={{ color: "#F0F9FF" }}>
               Built on Proven Medical Standards
@@ -635,7 +635,7 @@ export default function HomePage() {
                 <span className="text-xl">🦷</span>
               </div>
               <span className="font-display text-xl font-bold" style={{ color: "#F0F9FF" }}>
-                DentAI
+                Dent AI Care
               </span>
             </div>
             <p className="text-sm" style={{ color: "#94A3B8" }}>
@@ -674,14 +674,14 @@ export default function HomePage() {
               <ShieldCheck className="h-4 w-4" style={{ color: "var(--hex-warning)" }} /> Disclaimer
             </h4>
             <p className="text-sm" style={{ color: "#94A3B8" }}>
-              DentAI is an AI-assisted tool and does not replace professional dental advice. Always consult a licensed
+              Dent AI Care is an AI-assisted tool and does not replace professional dental advice. Always consult a licensed
               dentist.
             </p>
           </div>
         </div>
         <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
           <div className="container px-4 py-5 text-center text-xs" style={{ color: "#64748B" }}>
-            © 2026 Dent Care AI · vijaykumar Kakde
+            © 2026 Dent AI Care · Vijaykumar Kakde
           </div>
         </div>
       </footer>
