@@ -203,85 +203,34 @@ export default function HomePage() {
           </div>
 
           {/* RIGHT 40% — visual */}
-          <div className="lg:col-span-2 relative h-[460px] md:h-[520px] animate-slide-in-right">
-            {/* main mock card */}
+          <div className="lg:col-span-2 relative h-[280px] md:h-[340px] flex items-center justify-center animate-slide-in-right">
+            {/* Elegant hovering tooth */}
             <div
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] md:w-[320px] rounded-[20px] bg-white p-5 animate-float"
+              className="relative w-40 h-40 md:w-48 md:h-48 rounded-[32px] bg-white flex items-center justify-center shadow-2xl border border-blue-100 animate-float"
               style={{
-                boxShadow: "0 24px 60px rgba(14,165,233,0.25), 0 8px 24px rgba(99,102,241,0.15)",
-                border: "1px solid var(--hex-border-blue)",
+                boxShadow: "0 20px 48px rgba(14,165,233,0.12), 0 8px 20px rgba(99,102,241,0.06)",
               }}
             >
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-semibold" style={{ color: "var(--hex-primary-dark)" }}>
-                  SCAN #DA-2104
-                </span>
-                <span className="stage-moderate text-[10px] font-bold px-2 py-1 rounded-full">MODERATE</span>
-              </div>
-              {/* tooth + heatmap */}
+              {/* Radial glow background */}
+              <div 
+                className="absolute inset-0 rounded-[32px] opacity-20 -z-10"
+                style={{
+                  background: "radial-gradient(circle, #0EA5E9 0%, transparent 70%)"
+                }}
+              />
+              
+              {/* Tooth Emoji */}
+              <span className="text-7xl md:text-8xl select-none filter drop-shadow-lg">🦷</span>
+              
+              {/* Animated Scan Line */}
               <div
-                className="relative aspect-square rounded-2xl overflow-hidden mb-4"
-                style={{ background: "radial-gradient(circle at 50% 45%, #fff 0%, #E0F2FE 60%, #BAE6FD 100%)" }}
-              >
-                <div className="absolute inset-0 flex items-center justify-center text-7xl">🦷</div>
-                <div
-                  className="absolute"
-                  style={{
-                    inset: 0,
-                    background:
-                      "radial-gradient(circle at 55% 50%, rgba(239,68,68,0.55) 0%, rgba(245,158,11,0.35) 30%, transparent 55%)",
-                    mixBlendMode: "multiply",
-                  }}
-                />
-                <div
-                  className="absolute inset-x-0 top-0 h-[3px] animate-scan-line"
-                  style={{
-                    background: "linear-gradient(90deg, transparent, #0EA5E9, transparent)",
-                    boxShadow: "0 0 16px 4px rgba(14,165,233,0.6)",
-                  }}
-                />
-              </div>
-              {/* confidence + label row */}
-              <div className="flex items-center gap-3">
-                <div className="confidence-ring h-12 w-12" style={{ ["--p" as any]: 91 }}>
-                  <div
-                    className="absolute inset-0 flex items-center justify-center text-[11px] font-bold"
-                    style={{ color: "var(--hex-primary-dark)" }}
-                  >
-                    91%
-                  </div>
-                </div>
-                <div className="text-xs">
-                  <div className="font-semibold" style={{ color: "#0F172A" }}>
-                    AI Confidence
-                  </div>
-                  <div style={{ color: "hsl(var(--muted-foreground))" }}>Heatmap region detected</div>
-                </div>
-              </div>
+                className="absolute inset-x-6 h-[2px] animate-scan-line pointer-events-none"
+                style={{
+                  background: "linear-gradient(90deg, transparent, #0EA5E9, transparent)",
+                  boxShadow: "0 0 12px 3px rgba(14,165,233,0.5)",
+                }}
+              />
             </div>
-
-            {/* floating mini cards */}
-            <FloatingCard
-              className="top-4 right-2 md:right-0"
-              borderColor="var(--hex-success)"
-              icon={<Smile className="h-4 w-4" style={{ color: "var(--hex-success)" }} />}
-              text="Healthy Detected"
-              delay="0s"
-            />
-            <FloatingCard
-              className="bottom-6 left-0"
-              borderColor="var(--hex-warning)"
-              icon={<AlertTriangle className="h-4 w-4" style={{ color: "var(--hex-warning)" }} />}
-              text="Initial Caries"
-              delay="1.1s"
-            />
-            <FloatingCard
-              className="top-10 left-0 md:left-2"
-              borderColor="var(--hex-accent)"
-              icon={<Brain className="h-4 w-4" style={{ color: "var(--hex-accent)" }} />}
-              text="AI Confidence: 91%"
-              delay="0.5s"
-            />
           </div>
         </div>
       </section>
